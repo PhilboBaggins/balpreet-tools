@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="Hex tool.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="4.1373683"
+     inkscape:cx="49.669255"
+     inkscape:cy="54.503246"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="2675"
+     inkscape:window-y="1121"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect1"
+       style="fill:#004aff;fill-opacity:1;stroke:none;stroke-width:0.105816"
+       d="M 4.9996948 0 L 4.9996948 2.1740275 L 0 4.5656128 L 0 9.3477498 L 4.9996948 11.739335 L 4.9996948 16.521989 L 0 18.913057 L 0 23.695711 L 4.9996948 26.08678 L 4.9996948 30.869434 L 0 33.260502 L 0 38.043673 L 4.9996948 40.434741 L 4.9996948 45.217395 L 0 47.608464 L 0 52.391117 L 4.9996948 54.782186 L 4.9996948 59.565356 L 0 61.956425 L 0 66.739079 L 4.9996948 69.130147 L 4.9996948 73.913318 L 0 76.30387 L 0 81.086523 L 4.9996948 83.478109 L 4.9996948 88.260246 L 0 90.651831 L 0 95.434485 L 4.9996948 97.82607 L 4.9996948 100.0001 L 25.000024 100.0001 L 25.000024 99.7505 C 25.807512 99.913192 26.643306 100.0001 27.50013 100.0001 C 34.425116 100.0001 40.000142 94.425073 40.000142 87.500085 L 40.000142 12.500012 C 40.000142 5.5750262 34.425116 -1.2533172e-15 27.50013 0 C 26.643306 1.5507203e-16 25.807513 0.08690538 25.000024 0.24959717 L 25.000024 0 L 4.9996948 0 z M 27.50013 9.9999064 C 31.655126 9.9999064 34.999931 14.459818 34.999931 19.999813 L 34.999931 79.999768 C 34.999931 85.539763 31.655126 90.000191 27.50013 90.000191 C 23.345134 90.000191 19.999813 85.539763 19.999813 79.999768 L 19.999813 19.999813 C 19.999813 14.459818 23.345134 9.9999064 27.50013 9.9999064 z " />
+  </g>
+</svg>
