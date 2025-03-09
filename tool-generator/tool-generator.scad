@@ -1,5 +1,5 @@
 
-module tool(length, width, numSlots, slotDepth, slotShape)
+module tool(length, width, sideWidth, childSpacing)
 {
     projection()
     {
@@ -22,39 +22,73 @@ module tool(length, width, numSlots, slotDepth, slotShape)
                 translate([length - width/2, width*0.5]) cylinder(h=3, r=width/4, $fn=0);
             }
         }
+    }
 
-        // Slots
-        color("red")
-        for (i = [0 : numSlots - 1])
-        {
-            translate([(i + 0.5) * length / numSlots, 0, 0])
-            {
-                if (slotShape == "circle")
-                {
-                    // TODO: How many sides
-                    // TODO: The width of the slot is not determined by the length / numSlots ... it probably should be
-                    cylinder(h=1, r=slotDepth, $fn=20);
-                }
-                else if (slotShape == "hex")
-                {
-                    // TODO: This is not a hexagon, but a circle with 6 sides
-                    // TODO: The width of the slot is not determined by the length / numSlots ... it probably should be
-                    cylinder(h=1, r=slotDepth, $fn=6);
-                }
-                else if (slotShape == "square")
-                {
-                    cube([length / numSlots / 2, slotDepth*2, 10], center=true);
-                }
-                else
-                {
-                    echo("Unknown slot shape: ", slotShape);
-                }
-            }
-        }
+    // Tooth
+    for (i = [0 : $children - 1])
+    {
+        translate([sideWidth + (i * childSpacing), 0])
+        children(i);
     }
 }
 
-//tool(100, 40, 7, 5, "circle");
-//tool(100, 40, 7, 5, "hex");
-//tool(100, 40, 7, 5, "square");
-//tool(100, 40, 7, 5, "???????????????????????????????????");
+module toothRect(x, y)
+{
+    translate([0, -y])
+    square([x, y]);
+}
+
+module toothCircle(diameter)
+{
+    translate([diameter / 2, 0])
+    circle(r = diameter / 2);
+}
+
+module toothHex(diameter)
+{
+    translate([diameter / 2, 0])
+    circle(r = diameter / 2, $fn=6);
+}
+
+// // Circle
+// tool(100, 40, 5, 20)
+// {
+//     toothCircle(10);
+//     toothCircle(10);
+//     toothCircle(10);
+//     toothCircle(10);
+//     toothCircle(10);
+// }
+
+// // Hex
+// tool(100, 40, 5, 20)
+// {
+//     toothHex(10);
+//     toothHex(10);
+//     toothHex(10);
+//     toothHex(10);
+//     toothHex(10);
+// }
+
+// // Rectangle
+// tool(100, 40, 5, 20)
+// {
+//     toothRect(10, 5);
+//     toothRect(10, 5);
+//     toothRect(10, 5);
+//     toothRect(10, 5);
+//     toothRect(10, 5);
+// }
+
+// Combination
+// tool(100, 40, 5, 20)
+// {
+//     toothRect(10, 5);
+//     toothRect(10, 5);
+
+//     toothCircle(10);
+//     toothCircle(10);
+
+//     toothHex(10);
+//     toothHex(10);
+// }
