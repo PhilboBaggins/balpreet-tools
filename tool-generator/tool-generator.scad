@@ -2,18 +2,25 @@
 module tool(length, width, numSlots, slotDepth, slotShape)
 {
     projection()
-    //difference() // ?????????????????????? Originally planed to use this but the circle slot looks better without it .. TODO: Rethink this
     {
-        hull()
+        difference()
         {
-            // Straight edge that the slots are cut into
-            cube([length, 1, 1]);
+            hull()
+            {
+                // Straight edge that the slots are cut into
+                cube([length, 1, 1]);
 
-            // Rounded corners on the other side (where you hold the tool)
-            translate([         width/2, width*0.5]) cylinder(h=1, r=width/2, $fn=20);
-            translate([length - width/2, width*0.5]) cylinder(h=1, r=width/2, $fn=20);
-            //translate([         width/4, width*0.75]) cylinder(h=1, r=width/4, $fn=20);
-            //translate([length - width/4, width*0.75]) cylinder(h=1, r=width/4, $fn=20);
+                // Rounded corners on the other side (where you hold the tool)
+                translate([         width/2, width*0.5]) cylinder(h=1, r=width/2, $fn=20);
+                translate([length - width/2, width*0.5]) cylinder(h=1, r=width/2, $fn=20);
+            }
+
+            // Finger slot
+            hull()
+            {
+                translate([         width/2, width*0.5]) cylinder(h=3, r=width/4, $fn=0);
+                translate([length - width/2, width*0.5]) cylinder(h=3, r=width/4, $fn=0);
+            }
         }
 
         // Slots
