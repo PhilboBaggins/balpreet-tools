@@ -24,7 +24,7 @@ module tool(length, width, sideWidth, childSpacing)
         }
     }
 
-    // Tooth
+    // Teeth
     for (i = [0 : $children - 1])
     {
         translate([sideWidth + (i * childSpacing), 0])
