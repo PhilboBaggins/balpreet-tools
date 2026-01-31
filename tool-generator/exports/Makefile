@@ -1,4 +1,4 @@
-MAIN_SRC_FILE := tool-generator.scad
+MAIN_SRC_FILE := ../tool-generator.scad
 
 SRC_FILES := $(wildcard export-*.scad)
 SVG_FILES := $(patsubst %.scad,%.svg,$(SRC_FILES))
