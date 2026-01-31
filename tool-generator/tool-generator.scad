@@ -1,5 +1,5 @@
 
-module tool(length, width, sideWidth, childSpacing=0)
+module tool(length, width, sideWidth, childSpacing=0, include_finger_slot=false)
 {
     // Calculate spacing between children if not provided
     childSpacing = childSpacing == 0
@@ -22,6 +22,7 @@ module tool(length, width, sideWidth, childSpacing=0)
             }
 
             // Finger slot
+            if (include_finger_slot)
             hull()
             {
                 translate([         width/2, width*0.5]) cylinder(h=3, r=width/4, $fn=0);
@@ -57,7 +58,7 @@ module toothHex(diameter)
 }
 
 // // Circle
-// tool(100, 40, 5)
+// tool(100, 40, 5, include_finger_slot=true)
 // {
 //     toothCircle(10);
 //     toothCircle(10);
@@ -67,7 +68,7 @@ module toothHex(diameter)
 // }
 
 // // Hex
-// tool(100, 40, 5)
+// tool(100, 40, 5, include_finger_slot=true)
 // {
 //     toothHex(10);
 //     toothHex(10);
@@ -77,7 +78,7 @@ module toothHex(diameter)
 // }
 
 // // Rectangle
-// tool(100, 40, 5)
+// tool(100, 40, 5, include_finger_slot=true)
 // {
 //     toothRect(10, 5);
 //     toothRect(10, 5);
@@ -87,7 +88,7 @@ module toothHex(diameter)
 // }
 
 // // Combination
-// tool(100, 40, 5)
+// tool(100, 40, 5, include_finger_slot=true)
 // {
 //     toothRect(10, 5);
 //     toothRect(10, 5);
