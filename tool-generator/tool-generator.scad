@@ -11,14 +11,21 @@ module tool(length, width, sideWidth, childSpacing=0, include_finger_slot=false)
     {
         difference()
         {
-            hull()
+            if (include_finger_slot)
             {
-                // Straight edge that the slots are cut into
-                cube([length, 1, 1]);
+                hull()
+                {
+                    // Straight edge that the slots are cut into
+                    cube([length, 1, 1]);
 
-                // Rounded corners on the other side (where you hold the tool)
-                translate([         width/2, width*0.5]) cylinder(h=1, r=width/2, $fn=20);
-                translate([length - width/2, width*0.5]) cylinder(h=1, r=width/2, $fn=20);
+                    // Rounded corners on the other side (where you hold the tool)
+                    translate([         width/2, width*0.5]) cylinder(h=1, r=width/2, $fn=20);
+                    translate([length - width/2, width*0.5]) cylinder(h=1, r=width/2, $fn=20);
+                }
+            }
+            else
+            {
+                cube([length, width, 1]);
             }
 
             // Finger slot
