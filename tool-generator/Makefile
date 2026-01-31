@@ -20,7 +20,7 @@ README.md: $(PNG_FILES)
 	$(OSCAD_BINARY) -q -o $@ $<
 
 %.png: %.svg
-	magick convert $< $@
+	magick $< $@
 
 clean:
 	rm -f $(ALL)
