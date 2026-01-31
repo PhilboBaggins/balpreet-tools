@@ -1,6 +1,12 @@
 
-module tool(length, width, sideWidth, childSpacing)
+module tool(length, width, sideWidth, childSpacing=0)
 {
+    // Calculate spacing between children if not provided
+    childSpacing = childSpacing == 0
+        ? (length - (sideWidth * 4)) / ($children - 1)
+        : childSpacing;
+    //echo("childSpacing = ", childSpacing);
+
     projection()
     {
         difference()
@@ -51,7 +57,7 @@ module toothHex(diameter)
 }
 
 // // Circle
-// tool(100, 40, 5, 20)
+// tool(100, 40, 5)
 // {
 //     toothCircle(10);
 //     toothCircle(10);
@@ -61,7 +67,7 @@ module toothHex(diameter)
 // }
 
 // // Hex
-// tool(100, 40, 5, 20)
+// tool(100, 40, 5)
 // {
 //     toothHex(10);
 //     toothHex(10);
@@ -71,7 +77,7 @@ module toothHex(diameter)
 // }
 
 // // Rectangle
-// tool(100, 40, 5, 20)
+// tool(100, 40, 5)
 // {
 //     toothRect(10, 5);
 //     toothRect(10, 5);
@@ -80,8 +86,8 @@ module toothHex(diameter)
 //     toothRect(10, 5);
 // }
 
-// Combination
-// tool(100, 40, 5, 20)
+// // Combination
+// tool(100, 40, 5)
 // {
 //     toothRect(10, 5);
 //     toothRect(10, 5);
