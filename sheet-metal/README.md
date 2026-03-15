@@ -21,3 +21,12 @@ Sheet metal designs based on designs in [tool-generator](../tool-generator/) dir
     2. Add a 13mm wall to the top edge of the pad
     3. Add a 5mm wall to the front edge of the previous wall
     4. Add some fillets to the corners of the last wall
+
+## Example builds
+
+The following examples were made by JLC in February/March 2026.
+
+| File                                | Material       | Finish | Photo                                                                                   |
+|-------------------------------------|----------------|--------|-----------------------------------------------------------------------------------------|
+| `tools-100-40-5-7hex10-nofold.step` | 5052 aluminium | None   | ![Photo of manufactured tool](./photos/tools-100-40-5-7hex10-nofold-5052-aluminium.jpg) |
+| `tools-100-40-5-7hex10.step`        | 5052 aluminium | None   | ![Photo of manufactured tool](./photos/tools-100-40-5-7hex10-5052-aluminium.jpg)        |
